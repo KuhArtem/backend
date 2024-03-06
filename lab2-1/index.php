@@ -21,18 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = str_replace($search, $replace, $text);
 
     // Сортування назв міст
-    // Розділення рядка з назвами міст на масив за допомогою пробілів чи ком
-    // Сортування назв міст
     $cities = $_POST['cities'] ?? '';
-// Розділення рядка на масив за допомогою коми або пробілів
     $citiesArray = preg_split('/[\s,]+/', $cities);
-// Видалення пробілів на початку та в кінці кожної назви міста
     $citiesArray = array_map('trim', $citiesArray);
-// Видалення пустих елементів масиву
     $citiesArray = array_filter($citiesArray);
-// Сортування масиву міст
     sort($citiesArray);
-// Об'єднання масиву в рядок з відсортованими назвами міст
     $sortedCities = implode(', ', $citiesArray);
 
     // Вилучення імені файлу
