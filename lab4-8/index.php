@@ -13,7 +13,7 @@ class Human {
         $this->age = $age;
     }
 
-    // GETters and SETters
+
     public function getHeight() {
         return $this->height;
     }
@@ -49,7 +49,7 @@ class Student extends Human {
         $this->course = $course;
     }
 
-    // GETters and SETters
+
     public function getUniversity() {
         return $this->university;
     }
@@ -66,7 +66,6 @@ class Student extends Human {
         $this->course = $course;
     }
 
-    // Method to move student to the next course
     public function moveToNextCourse() {
         $this->course++;
     }
@@ -82,7 +81,7 @@ class Programmer extends Human {
         $this->experience = $experience;
     }
 
-    // GETters and SETters
+
     public function getProgrammingLanguages() {
         return $this->programmingLanguages;
     }
@@ -99,7 +98,6 @@ class Programmer extends Human {
         $this->experience = $experience;
     }
 
-    // Method to add a new programming language
     public function addProgrammingLanguage($language) {
         $this->programmingLanguages[] = $language;
     }

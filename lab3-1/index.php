@@ -36,7 +36,7 @@ if(isset($_GET['font_size'])) {
     </style>
 </head>
 <body style="font-size: <?php echo $font_size; ?>;">
-<!-- Посилання для вибору розміру шрифту -->
+
 <a href="?font_size=big">Великий шрифт</a> |
 <a href="?font_size=medium">Середній шрифт</a> |
 <a href="?font_size=small">Маленький шрифт</a>

@@ -1,11 +1,10 @@
 <?php
-require_once 'autoload.php';
+// autoload.php
 
-use Models\UserModel;
-use Controllers\UserController;
-use Views\UserView;
-
-$userModel = new UserModel();
-$userController = new UserController();
-$userView = new UserView();
-?>
+// Регистрируем функцию автозагрузки классов
+spl_autoload_register(function ($class) {
+    // Преобразуем пространство имен в соответствующий путь к файлу
+    $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+    // Подключаем файл класса
+    require_once __DIR__ . DIRECTORY_SEPARATOR . $class . '.php';
+});
